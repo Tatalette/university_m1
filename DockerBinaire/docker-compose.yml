@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  php-cli:
+    build: .
+    container_name: php-bin-requests
+    volumes:
+      - ./src:/var/www/html
+      - ./bin:/var/www/bin
+    working_dir: /var/www/html
+    tty: true
+    stdin_open: true
